@@ -21,3 +21,6 @@ public class LC_1 {
       System.out.println(Arrays.toString(res));
     }
 }
+
+//it's time complexity is O(n2).
+//but i will write it in O(n).
