@@ -1,4 +1,7 @@
-/*
+/* Remove Duplicates from Sorted Array
+Question Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+
+
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
 
 Consider the number of unique elements in nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements k.
@@ -86,3 +89,34 @@ public class LC_26 {
     System.out.println(res);
     }
 }
+
+// Time Complexity: O(n)
+// Reason: The loop traverses the entire array only once (single pass).
+
+/*
+ // Question Understanding:
+// - You are given a sorted array (numbers are already in order).
+// - Some elements may be repeated (duplicates).
+// - Your task is to remove duplicates in-place (without using extra space).
+// - You must keep only unique elements at the beginning of the array.
+// - Finally, return how many unique elements are present.
+
+// Flow Summary (Easy Explanation):
+// 1. Start with the first element (index 0). It is always unique.
+// 2. Use another pointer to check each next element one by one.
+// 3. Compare current element with the last unique element.
+// 4. If it is different:
+//    - Move the unique pointer forward.
+//    - Place this new unique value at that position.
+// 5. If it is the same (duplicate), ignore it and move ahead.
+// 6. Continue till the end of the array.
+// 7. Return total count of unique elements (first + 1).
+
+// Thinking Process:
+// - Since array is sorted, duplicates will always be next to each other.
+// - So we only need to compare with the previous unique element.
+// - One pointer (first) keeps track of unique elements.
+// - Another pointer (second) scans the array.
+// - When a new value appears, we shift it to the correct position.
+// - This avoids using extra space and keeps solution efficient.
+*/

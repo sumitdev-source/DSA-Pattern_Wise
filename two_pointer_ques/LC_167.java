@@ -1,4 +1,6 @@
-/* Medium
+/* Two Sum II - Input Array Is Sorted
+Question Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
+
 Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
 
 Return the indices of the two numbers index1 and index2, each incremented by one, as an integer array [index1, index2] of length 2.
@@ -63,3 +65,39 @@ public class LC_167 {
     System.out.println(Arrays.toString(res));
   }
 }
+
+
+// Step 1: Start with two pointers
+// 'first' at the beginning (index 0)
+// 'second' at the end (last index)
+
+// Step 2: Run a loop while first < second
+
+// Step 3: Inside loop, calculate sum of elements at both pointers
+
+// Step 4: Check conditions:
+
+// If sum == target:
+// → We found the required pair
+// → Return their positions (add +1 because index is 1-based)
+
+// If sum < target:
+// → Current sum is too small
+// → Move 'first' forward to increase sum
+
+// If sum > target:
+// → Current sum is too large
+// → Move 'second' backward to decrease sum
+
+// Step 5: Repeat until pointers meet
+
+// Step 6: If no pair is found:
+// → Return empty array
+
+
+// Time Complexity: O(n)
+//
+// Explanation:
+// The algorithm uses two pointers (one at the start and one at the end).
+// In each iteration, either the first pointer moves forward or the second pointer moves backward.
+// Each element is processed at most once, so the total number of operations is proportional to n.

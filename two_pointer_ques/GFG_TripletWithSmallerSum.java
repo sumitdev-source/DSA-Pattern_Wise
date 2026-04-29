@@ -1,4 +1,5 @@
-/* Medium 
+/* Triplets with Smaller Sum
+Question Link- https://www.geeksforgeeks.org/problems/count-triplets-with-sum-smaller-than-x5549/1
 
 Given an array arr[] of distinct integers and a value sum, find the count of triplets (i, j, k), having (i<j<k) with the sum of (arr[i] + arr[j] + arr[k]) smaller than the given value sum.
 
@@ -159,3 +160,20 @@ Move to next i and repeat same process.
 Step 10:
 Return total count.
 */
+
+// Time Complexity Analysis:
+
+// Step 1: Sorting the array
+// Arrays.sort(arr) takes O(n log n)
+
+// Step 2: Outer loop runs (n - 2) times → approx O(n)
+
+// Step 3: Inner while loop (two-pointer)
+// For each i, left and right pointers move at most n times total
+// So inner loop runs O(n) for each i
+
+// Total Time Complexity:
+// O(n log n) + O(n * n)
+// = O(n^2)
+
+// Final Time Complexity: O(n^2)

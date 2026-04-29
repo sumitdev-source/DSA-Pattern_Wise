@@ -1,4 +1,6 @@
-/* Medium
+/* 3Sum Closest
+Question Link - https://leetcode.com/problems/3sum-closest/
+
 Given an integer array nums of length n and an integer target, find three integers at distinct indices in nums such that the sum is closest to target.
 
 Return the sum of the three integers.
@@ -129,3 +131,12 @@ At last, return the closest value which is the sum nearest to the target.
 */
 
 
+/*
+Time Complexity
+// Sorting: O(n log n)
+// Outer loop: O(n)
+// Inner two-pointer loop: O(n)
+
+// Total Time Complexity: O(n^2)
+// Reason: O(n log n) + O(n^2) → O(n^2) dominates
+*/

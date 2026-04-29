@@ -1,4 +1,6 @@
-/* Easy
+/*  Squares of a Sorted Array
+Question Link- https://leetcode.com/problems/squares-of-a-sorted-array/description/
+
 Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
 Example 1:
@@ -25,7 +27,6 @@ Follow up: Squaring each element and sorting the new array is very trivial, coul
 
 package two_pointer_ques;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class LC_977 {
@@ -57,6 +58,10 @@ public class LC_977 {
     System.out.println(Arrays.toString(res));
   }
 }
+
+// Time Complexity: O(n)
+// Reason: The array is traversed only once using two pointers (left and right).
+// Each element is processed exactly one time, so it takes linear time.
 
 /*
 Flow ;

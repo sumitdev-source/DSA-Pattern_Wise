@@ -1,4 +1,6 @@
-/* Medium 
+/* 3Sum
+Question Link: https://leetcode.com/problems/3sum/description/
+
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
 Notice that the solution set must not contain duplicate triplets.
@@ -162,3 +164,26 @@ Continue this for all elements in the loop.
 
 At last, return the result list which contains all unique triplets whose sum is 0.
 */
+
+
+
+// Time Complexity Analysis:
+
+// 1. Sorting the array:
+// Arrays.sort(nums) → O(n log n)
+
+// 2. Outer loop runs for each element:
+// for (int i = 0; i < n - 2; i++) → O(n)
+
+// 3. Inner while loop (two-pointer):
+// left and right pointers move at most n times total per iteration of i → O(n)
+
+// 4. Total complexity:
+// Outer loop O(n) * Inner loop O(n) = O(n²)
+
+// Final Time Complexity:
+// O(n log n) + O(n²) → O(n²)   (dominant term)
+
+// Space Complexity:
+// O(1) (excluding result list)
+// O(k) (including result list, where k = number of triplets)

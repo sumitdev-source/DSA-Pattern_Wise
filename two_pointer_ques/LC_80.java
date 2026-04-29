@@ -1,4 +1,6 @@
-/* Medium Ques.
+/* Remove Duplicates from Sorted Array II
+Question Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
+
 Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same.
 
 Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
@@ -73,3 +75,40 @@ public class LC_80 {
     System.out.println(res);
     }
 }
+
+/*
+// Time Complexity: O(n)
+// Reason: The 'second' pointer traverses the array only once from start to end.
+// Each element is processed at most one time, so overall linear time.
+*/
+
+/*
+```id="f8291"
+// Flow of the code:
+
+// 1. Initialize:
+//    first = 0 → points to position of last valid element
+//    second = 1 → scans the array
+//    res = 1 → at least one element is always counted
+
+// 2. Loop runs while second < nums.length
+
+// 3. Check condition:
+//    If current element (nums[second]) is same as nums[first]
+//    AND also same as nums[first-1]
+//    → means this is more than 2 duplicate
+//    → skip it by doing second++
+
+// 4. If condition is false:
+//    → valid element (allowed duplicate or new number)
+//    → place it at nums[first + 1]
+//    → move first forward (first++)
+//    → move second forward (second++)
+//    → increase result count (res++)
+
+// 5. Continue until second reaches end of array
+
+// 6. Return res → length of array with at most 2 duplicates allowed
+```
+
+*/
