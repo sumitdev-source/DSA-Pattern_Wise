@@ -59,27 +59,42 @@ import java.util.Map;
 
 public class LC_3_longsubstrngwithoutrepeat {
     public static int lengthOfLongestSubstring(String s) {
-    int n = s.length(); // length of the string
-    int left = 0, maxLen = 0; // left pointer and maximum length found so far
-    Map<Character, Integer> lastIndex = new HashMap<>(); // stores last seen index of each character
+     int n = s.length(); 
+        // total length of string → loop will run till here
 
-    for (int right = 0; right < n; right++) { // move right pointer through the string
-        char c = s.charAt(right); // current character
+        int left = 0, maxLen = 0; 
+        // left = start of current window
+        // maxLen = best answer we have found so far
 
-        // if the character has been seen before
-        if (lastIndex.containsKey(c)) {
-            // move left pointer to the position after its last occurrence
-            left = Math.max(left, lastIndex.get(c) + 1);
+        Map<Character, Integer> lastIndex = new HashMap<>();
+        // store where each character was last seen
+        // → helps us quickly detect duplicates
+
+        for (int right = 0; right < n; right++) {
+            // right pointer moves forward → window grows
+
+            char c = s.charAt(right);
+            // get current character
+
+            if (lastIndex.containsKey(c)) {
+                // if duplicate found → shrink window
+
+                left = Math.max(left, lastIndex.get(c) + 1);
+                // move left forward to remove duplicate
+            }
+            // if NO duplicate:
+            // → do nothing with left
+            // → window automatically expands as right moves
+
+            lastIndex.put(c, right);
+            // update latest position of current character
+
+            maxLen = Math.max(maxLen, right - left + 1);
+            // calculate window size and update max length
         }
 
-        // update the latest index of the current character
-        lastIndex.put(c, right);
-
-        // calculate current window length and update max length
-        maxLen = Math.max(maxLen, right - left + 1);
-    }
-
-    return maxLen; // return the final answer
+        return maxLen;
+        // return longest length found
 }
   
 }
@@ -119,3 +134,16 @@ public class LC_3_longsubstrngwithoutrepeat {
 // Don’t move left pointer backward (breaks window logic)
 // Don’t ignore duplicates (window must have unique characters)
 */
+
+// Time Complexity: O(n)
+// → right pointer runs from 0 to n-1 (single loop)
+// → left pointer also moves forward (never goes back)
+// → each character is processed at most once
+// → HashMap operations (put/get/containsKey) are O(1)
+
+// So overall: O(n)
+
+// Space Complexity: O(n)
+// → in worst case, all characters are unique
+// → HashMap stores all n characters
+// → so space = O(n)
