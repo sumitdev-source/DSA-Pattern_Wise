@@ -64,9 +64,9 @@ public class final_keyword {
     //but we can't reassign it gives the error.
      a = new E();
     */
-    
-   
-  
-
   }
 }
+
+/*
+  final means, after using it with class, method or variable it will not change.
+*/
