@@ -10,7 +10,7 @@ class A {
   }
 }
 
-public class object {
+public class basic_Code_Object_n_Class {
   public static void main(String[] args) {
     A s1 = new A();
     
