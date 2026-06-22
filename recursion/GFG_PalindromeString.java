@@ -144,8 +144,6 @@ public class GFG_PalindromeString {
 // "acv"   -> false
 
 
-
-```java id="b2cd2i"
 // Time Complexity: O(n)
 //
 // Easy Explanation:
@@ -218,6 +216,5 @@ public class GFG_PalindromeString {
 // So space complexity is:
 //
 // O(n)
-```
 
 
