@@ -57,3 +57,12 @@ public class Constructor {
   }
 
 }
+
+
+/*
+Here we see about Constructor:
+-> Constructor is special method which is used to initiliaze object, does not return any thing.
+-> Constructor can be overloaded , for example see the class B , there multiple types of constructor with different parameters.
+-> Constructor can't be overridden, because Overriding needs inheritance, but child class can't inherit constructor of parent class.
+-> Constructor can be private, real life example is Singleton Class
+*/
