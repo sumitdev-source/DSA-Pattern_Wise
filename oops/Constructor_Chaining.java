@@ -45,4 +45,7 @@ public class Constructor_Chaining {
 Constructor Chaining: It is used to call constructor from other constructor. Using this() and super().
 Type 1: this() = it works within same class.
 Type 2: super() = it uses inheritence.
+this() and Super() can never be written together in same method.
+this() or Super() must be first line statement in method
+super(), if you dont write it, java adds it automatically
 */
